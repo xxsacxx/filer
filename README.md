@@ -22,7 +22,7 @@ will arrange the files in their respective directories at the time of download.M
 
 ### To run a watcher which keeps checking a directory for any change and on a change move the file:
 -----------------------------------------------------------------------------------------
-             $ python3 /scripts_coll/watcher.py [path/to/dir/you/want/to/tidy]
+       $ python3 /scripts_coll/watcher.py [path/to/dir/you/want/to/tidy]
              
 ### Example:
 ------------
@@ -32,7 +32,7 @@ will arrange the files in their respective directories at the time of download.M
 
 ### To run  it once to tidy your directory :
 ---------------------------------
-          $ python3 /scripts_coll/moving_files_man.py [path/to/dir/you/want/to/tidy]
+       $ python3 /scripts_coll/moving_files_man.py [path/to/dir/you/want/to/tidy]
           
           
  ### Example:
