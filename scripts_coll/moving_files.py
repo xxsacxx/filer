@@ -9,7 +9,7 @@ import logging
 
 logger = logging.getLogger(__name__)  
 here = os.getcwd()
-#here = os.path.dirname(os.path.abspath(__file__))
+
 log_file = os.path.join(here, 'filer.log')
 # set log level
 logger.setLevel(logging.DEBUG)
