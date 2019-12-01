@@ -5,6 +5,20 @@ import shutil
 import ntpath
 import errno
 import traceback
+import logging
+
+logger = logging.getLogger(__name__)  
+here = os.getcwd()
+#here = os.path.dirname(os.path.abspath(__file__))
+log_file = os.path.join(here, 'filer.log')
+# set log level
+logger.setLevel(logging.DEBUG)
+# define file handler and set formatter
+file_handler = logging.FileHandler(log_file)
+formatter    = logging.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(message)s')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
 
 def path_leaf(path):
     head, tail = ntpath.split(path)
