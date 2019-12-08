@@ -28,9 +28,9 @@ for root, dirs, files in os.walk(path):
         try:
             logger.info("moving file {0}".format(file))
             move_files(path,file)
-            break
+    
         except:
             logger.error(traceback.format_exc())
 
-       
+    break       
     

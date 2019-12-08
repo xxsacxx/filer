@@ -30,7 +30,7 @@ path = sys.argv[1] if len(sys.argv) > 1 else '.'
 
 class MyEventHandler(FileSystemEventHandler):
     def catch_all_handler(self, event):
-        # logging.debug(event)
+        logging.info(event)
         if "File"  in event.__class__.__name__: 
              logger.info("changed file is {0}".format(((moving_files.path_leaf(event.src_path)))))
              moving_files.move_files(path,moving_files.path_leaf(event.src_path))

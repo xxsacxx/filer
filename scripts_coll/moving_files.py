@@ -32,12 +32,14 @@ def move_files(dirs, file):
 
     file_paths = []
     path = str(os.path.join(dirs, file))
-   
+    image_files = ["jpg", "gif", "png"]
 
     if path[-3:] == ".py":
         sub_fldr = "scripts"
     elif path[-5:] == "ipynb":
         sub_fldr = "notebooks"
+    elif path[-3:] in image_files:
+        sub_fldr = "images"
     else:
         sub_fldr = "others"
     file_paths.append(path)
@@ -48,7 +50,9 @@ def move_files(dirs, file):
         for fp in file_paths:
             
             fname = path_leaf(fp)
-            shutil.move(fp, str(dirs)+"/"+sub_fldr+"/"+str(fname))
+            shutil.move(fp, str(dirs)+sub_fldr+"/"+str(fname))
+        
+      
     except OSError as exc:
  
         logger.error(traceback.format_exc()) 
